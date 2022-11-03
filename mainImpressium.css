@@ -1,0 +1,241 @@
+*{
+  box-sizing: border-box;
+}
+
+
+html{
+  height: 100%;
+  font-family: lato, sans-serif;
+  font-size: 0.4em;
+}
+@media (min-width: 100em) {
+html {
+  font-size: 0.7em;
+}
+}
+
+@media (min-width: 120em) {
+html {
+  font-size: 0.8em;
+}
+}
+
+@media (min-width: 140em) {
+html {
+    font-size: 0.9em;
+}
+}
+
+
+
+body{
+  min-height: 100%;
+  font-family: InknutAntiqua-Bold, 'InknutAntiqua-Bold';
+  margin: 0;
+  padding: 0;
+  background-color: rgb(71, 62, 62);
+  background-image: 
+      linear-gradient(90deg, #744949 45%, rgba(0, 0, 0, 0.5) 45%, transparent 45%),
+      url("Waves.svg"),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%),
+      url("anwalt.jpg");
+  background-repeat:no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size:100% 100% ,33% auto, 100% 100%, cover;
+  background-position:50% 50%, 105% 110%, 50% 50%, 100% 2%;
+  background-attachment: fixed;
+}
+
+@media (max-width: 62.5em) {
+body {
+  background-image: none;
+  background-attachment: initial;
+  background-repeat: no-repeat;
+  background-position: 105% 110%;
+  background-size: 50vw auto;
+  background-color: #744949;
+  font-size: 5rem;
+
+}
+}
+
+.page{
+  display: flex;
+  flex-direction: row;
+  flex: 1 0 auto;
+}
+
+@media (max-width: 62.5em) {
+  .page {
+    flex-direction: column;
+    font-size: 5rem;
+
+  }
+}
+.page-container{
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
+
+.main-content{
+  flex: 0 0 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-gesetz{
+  font-size: 2rem;
+  font-style: italic;
+  margin: 1rem 3rem 3rem 1rem;
+}
+
+.tabelle{
+
+margin: 0;
+padding: 0;
+font-size: 1.5rem;
+}
+
+.datenschutz{
+  display: block;
+  color: aliceblue;
+  text-decoration: none;
+  display: block;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+  text-shadow: 1px 0px rgba(0, 0, 0, 0.4);
+  letter-spacing: .2em;
+  transition: color 200ms;
+  transform-style: preserve-3d;
+  padding-left: 2.5rem;
+}
+.datenschutz:hover{
+  color: black;
+}
+
+.verantwortlich{
+  display: block;
+  color: aliceblue;
+  text-decoration: none;
+  display: block;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+  text-shadow: 1px 0px rgba(0, 0, 0, 0.4);
+  letter-spacing: .2em;
+  transition: color 200ms;
+  transform-style: preserve-3d;
+  padding-left: 2.5rem;
+
+}
+.verantwortlich:hover{
+  color: black;
+}
+
+
+.countdown{
+  flex:0 1 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.countdown-heading{
+  margin: 0 0 0 0;
+  text-align: center;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: italic;
+  font-size: 3rem;
+  color: aliceblue;
+  letter-spacing: 0.05em;
+}
+.leidenschaft{
+   margin: 0;
+  text-align: center;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: italic;
+  font-size: 3.2rem;
+  color: aliceblue;
+  letter-spacing: 0.05em;
+}
+
+.navigator{
+font-size: 1.5rem;
+}
+
+ul {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+
+  background-color: #343e48;
+  position: relative;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+}
+ul:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10rem;
+  height: 10rem;
+  opacity: .5;
+}
+
+li {
+  margin: 0 auto;
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+}
+
+li> a {
+  display: block;
+  padding: 1.5rem 2rem  ;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+  text-shadow: 1px 0px rgba(0, 0, 0, 0.4);
+  color: #686f77;
+  letter-spacing: .2em;
+  text-decoration: none;
+  transition: color 200ms;
+  transform-style: preserve-3d;
+}
+  a:hover {
+  color: #343e48;
+}
+a:after {
+  content: attr(data-title);
+  position: absolute;
+  display: block;
+  text-shadow: none;
+  top: 29%;
+  left: 1.3rem;
+  padding: 0.4rem 0.5rem;
+  color: transparent;
+  background: #4795c3;
+  transform-origin: 50% 0%;
+  backface-visibility: hidden;
+  transform: translate3d(0px, 105%, 0px) rotateX(-112deg);
+  transform-style: preserve-3d;
+  transition: all 200ms ease;
+  z-index: -1;
+}
+li:nth-child(2) a:after {
+  background: #ecc64b;
+}
+li:nth-child(3) a:after {
+  background: #0b9ea6;
+}
+li:nth-child(4) a:after {
+  background: #f26667;
+}
+a:hover:after {
+  transform: rotateX(0deg) translateZ(0px);
+}
